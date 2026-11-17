@@ -1,100 +1,263 @@
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profil Biodata Mahasiswa</title>
+    <title>Tentang Founder - Poliban DigiCraft Studio</title>
 
     <style>
         body {
             font-family: "Times New Roman", Times, serif;
-            background: linear-gradient(to right, #eee5f5, #d8c5e8);
-            color: black;
+            background-color: #f4f7f7;
+            color: #1a1a1a;
             margin: 0;
-            padding: 40px 20px;
+            padding: 0;
         }
 
+        /* Header & Navigasi menyatu dengan Poliban DigiCraft Studio */
+        header {
+            background-color: #0b7a75;
+            color: white;
+            text-align: center;
+            padding: 30px 20px 20px 20px;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 32px;
+            letter-spacing: 0.5px;
+        }
+
+        header p {
+            margin: 10px 0 20px 0;
+            font-size: 15px;
+            color: #d9f2f0;
+        }
+
+        nav {
+            border-top: 1px solid rgba(255, 255, 255, 0.5);
+            padding-top: 15px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            margin: 0 12px;
+            padding: 6px 14px;
+            border-radius: 4px;
+        }
+
+        nav a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        nav a.active {
+            background-color: #3da39e;
+            font-weight: bold;
+        }
+
+        /* Kontainer Utama */
         .container {
             max-width: 850px;
-            margin: auto;
+            margin: 35px auto;
             padding: 35px 45px;
-            background-color: #f3a0d7;
-            border: 2px solid #ec24f3;
+            background-color: #ffffff;
+            border: 1px solid #cce3e2;
             border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
         }
 
-        h1 {
+        .container h1 {
             text-align: center;
-            color: black;
-            font-size: 30px;
-            margin-bottom: 35px;
-            padding-bottom: 15px;
-            border-bottom: 3px solid #fd12f1;
+            color: #0b7a75;
+            font-size: 28px;
+            margin-top: 0;
+            margin-bottom: 25px;
+            padding-bottom: 12px;
+            border-bottom: 3px solid #0b7a75;
         }
 
-        h2 {
-            color: black;
+        /* Kartu Profil Atas (Foto + Ringkasan Founder) */
+        .founder-header {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            background-color: #eef7f6;
+            padding: 20px 25px;
+            border-radius: 8px;
+            border-left: 6px solid #0b7a75;
+            margin-bottom: 25px;
+        }
+
+        .founder-photo {
+            width: 125px;
+            height: 125px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #0b7a75;
+            background-color: #d9f2f0;
+            flex-shrink: 0;
+        }
+
+        .founder-intro h3 {
+            margin: 0 0 6px 0;
             font-size: 23px;
-            margin-top: 30px;
-            padding: 8px 12px;
-            background-color: #f828f8;
-            border-left: 5px solid #e61bf8;
+            color: #064e4b;
         }
 
-        p {
-            font-size: 18px;
-            line-height: 1.7;
-            margin-left: 15px;
+        .founder-role {
+            display: inline-block;
+            background-color: #0b7a75;
+            color: white;
+            font-size: 14px;
+            padding: 4px 12px;
+            border-radius: 4px;
+            margin-bottom: 10px;
         }
 
+        .founder-bio {
+            margin: 0;
+            font-size: 16px;
+            line-height: 1.6;
+            color: #333333;
+        }
+
+        /* Sub-judul Bagian */
+        h2 {
+            color: white;
+            font-size: 20px;
+            margin-top: 28px;
+            padding: 8px 14px;
+            background-color: #0b7a75;
+            border-left: 6px solid #064e4b;
+            border-radius: 3px;
+        }
+
+        /* Tabel Biodata Akademik yang Rapi */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+            font-size: 17px;
+        }
+
+        td {
+            padding: 9px 12px;
+            border-bottom: 1px solid #e0eeee;
+        }
+
+        td.label {
+            width: 210px;
+            font-weight: bold;
+            color: #064e4b;
+        }
+
+        /* Daftar Riwayat & Keahlian */
         ol, ul {
-            font-size: 18px;
+            font-size: 17px;
             line-height: 1.8;
-            padding-left: 40px;
+            padding-left: 35px;
         }
 
         li {
-            padding: 3px 5px;
+            padding: 4px 5px;
         }
 
         li::marker {
-            color: black;
+            color: #0b7a75;
+            font-weight: bold;
+        }
+
+        /* Kotak Kutipan / Visi Founder */
+        blockquote {
+            margin: 30px 0 0 0;
+            padding: 15px 20px;
+            background-color: #f0f9f8;
+            border-left: 5px solid #3da39e;
+            font-style: italic;
+            font-size: 17px;
+            color: #064e4b;
         }
     </style>
 </head>
 
 <body>
 
+    <header>
+        <h1>Poliban DigiCraft Studio</h1>
+        <p>Solusi Transformasi Bisnis Digital Anda di Banjarmasin</p>
+        <nav>
+            <a href="index.html">Beranda</a> |
+            <a href="biodata.html" class="active">Tentang Founder</a> |
+            <a href="produk.html">Katalog Jasa &amp; Paket Harga</a> |
+            <a href="kontak.html">kontak &amp; Pemesanan</a>
+        </nav>
+    </header>
+
     <div class="container">
 
-        <h1>PROFIL BIODATA MAHASISWA</h1>
+        <h1>PROFIL FOUNDER &amp; BIODATA MAHASISWA</h1>
 
-        <h2>Profil Utama</h2>
+        <!-- Kartu Profil Atas -->
+        <div class="founder-header">
+            <img src="gambar.jpg" alt="Foto Kinanti Nur Azmi Putri" class="founder-photo">
+            <div class="founder-intro">
+                <h3>Kinanti Nur Azmi Putri</h3>
+                <span class="founder-role">Founder &amp; Digital Business Strategist</span>
+                <p class="founder-bio">
+                    Mahasiswa D4 Bisnis Digital Politeknik Negeri Banjarmasin yang berfokus pada analisis data bisnis, riset pasar, serta pengembangan strategi digital untuk membantu UMKM lokal naik kelas.
+                </p>
+            </div>
+        </div>
 
-        <p>Nama: <b>Kinanti Nur Azmi Putri</b></p>
-        <p>NIM: <i>E030425009</i></p>
-        <p>Program Studi: D4 Bisnis Digital</p>
-        <p>Kelas: 3E</p>
+        <h2>Identitas Akademik</h2>
+        <table>
+            <tr>
+                <td class="label">Nama Lengkap</td>
+                <td>: Kinanti Nur Azmi Putri</td>
+            </tr>
+            <tr>
+                <td class="label">NIM</td>
+                <td>: E030425099</td>
+            </tr>
+            <tr>
+                <td class="label">Program Studi</td>
+                <td>: D4 Bisnis Digital</td>
+            </tr>
+            <tr>
+                <td class="label">Kelas</td>
+                <td>: 3E</td>
+            </tr>
+            <tr>
+                <td class="label">Institusi</td>
+                <td>: Politeknik Negeri Banjarmasin</td>
+            </tr>
+        </table>
 
         <h2>Riwayat Pendidikan</h2>
-
         <ol>
-            <li>SD: SDN Pemda 5 Banjarmasin</li>
-            <li>SMP: SMP Negeri 19 Banjarmasin</li>
-            <li>SMA: SMA Negeri 13 Banjarmasin – Kurikulum Merdeka (Lulus 2025)</li>
-            <li>Perguruan Tinggi: Politeknik Negeri Banjarmasin – D4 Bisnis Digital (2025 - Sekarang)</li>
+            <li><strong>SD:</strong> SDN Pemda 5 Banjarmasin</li>
+            <li><strong>SMP:</strong> SMP Negeri 19 Banjarmasin</li>
+            <li><strong>SMA:</strong> SMA Negeri 13 Banjarmasin – Kurikulum Merdeka (Lulus 2025)</li>
+            <li><strong>Perguruan Tinggi:</strong> Politeknik Negeri Banjarmasin – D4 Bisnis Digital (2025 – Sekarang)</li>
         </ol>
 
-        <h2>Hobi / Minat &amp; Keterampilan</h2>
-
+        <h2>Keahlian, Pengalaman &amp; Minat</h2>
         <ul>
-            <li>Hard Skills: Analisis Data Dasar, Riset Pasar, Perhitungan Model &amp; Operasional Bisnis.</li>
-            <li>Tools &amp; Software: Microsoft Excel / Google Sheets, Python (Basic Logika), Microsoft PowerPoint, Microsoft Word.</li>
-            <li>Soft Skills: Kerja Sama Tim, Pemecahan Masalah, Komunikasi, Manajemen Waktu.</li>
-            <li>Pengalaman Proyek: Pelaksanaan Produksi &amp; Pencatatan Keuangan (P5 SMA 2024), Praktikum Data Sekunder (Poliban 2025-2026).</li>
-            <li>Hobi &amp; Minat: Mendengarkan musik, bermain game.</li>
+            <li><strong>Hard Skills:</strong> Analisis Data Dasar, Riset Pasar, Perhitungan Model &amp; Operasional Bisnis.</li>
+            <li><strong>Tools &amp; Software:</strong> Microsoft Excel / Google Sheets, Python (Basic Logika), Microsoft PowerPoint, Microsoft Word.</li>
+            <li><strong>Soft Skills:</strong> Kerja Sama Tim, Pemecahan Masalah, Komunikasi, Manajemen Waktu.</li>
+            <li><strong>Pengalaman Proyek:</strong> Pelaksanaan Produksi &amp; Pencatatan Keuangan (P5 SMA 2024), Praktikum Data Sekunder (Poliban 2025–2026).</li>
+            <li><strong>Hobi &amp; Minat:</strong> Mendengarkan musik, bermain game.</li>
         </ul>
+
+        <blockquote>
+            “Menggabungkan ketajaman analisis data dan kreativitas digital untuk mendorong pertumbuhan UMKM Banjarmasin.”
+        </blockquote>
 
     </div>
 

@@ -3,98 +3,135 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Katalog Produk & Portofolio - Poliban DigiCraft Studio</title>
+    <title>Katalog Produk &amp; Portofolio - Poliban DigiCraft Studio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
     <!-- Bagian Kepala Halaman (Header & Navigasi) -->
-     <header>
+    <header>
         <div class="container">
             <h1>Poliban DigiCraft Studio</h1>
             <p>Solusi Transformasi Bisnis Digital Anda di Banjarmasin</p>
             <hr>
             <nav>
-               <a href="index.html">Beranda</a> |
-               <a href="tentang.html">Tentang Founder</a> |
-               <a href="produk.html" class="active">Katalog Jasa & Paket Harga</a> |
-               <a href="kontak.html"><b>kontak & Pemesanan</b></a> 
+                <a href="index.html">Beranda</a> |
+                <a href="biodata.html">Tentang Founder</a> |
+                <a href="produk.html" class="active">Katalog Jasa &amp; Paket Harga</a> |
+                <a href="kontak.html"><b>kontak &amp; Pemesanan</b></a>
             </nav>
         </div>
-     </header>
-     <hr>
+    </header>
+    <hr>
 
-     <section>
-        <h2>Portofolio & Karya Unggulan Kami</h2>
+    <main class="container">
 
-        <!-- Menampilkan  Gambar Mockup (Gunakan gambar yang ada di folder komputer anda )-->
-         <p>
-            <img src="gambar.jpg" alt="Mockup Desain Landing Page Agensi" width="450">
-            <br>
-            <em>Gambar 1: Desain Landing Page Responsif untuk UMKM Lokal</em>
-         </p>
+        <!-- Bagian 1: Portofolio & Video -->
+        <section class="section">
+            <h2 class="section-title">Portofolio &amp; Karya Unggulan Kami</h2>
+            <p class="section-subtitle">Dokumentasi hasil karya desain dan profil kerja profesional tim kreatif kami</p>
 
-         <!-- Menyematkan Vidio YouTube Profil Agensi -->
-          <p>
-            <h3>Video Youtube Profil Bisnis Kami</h3>
-            <iframe width="560" height="315"
-            src="https://www.youTube.com/embed/dQw4w9WgXcQ"
-            title="YouTube video player" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write;
-            encrypted-media; gyroscope"
-            allowfullscreen></iframe>
-            </p>
-     </section>
-     <hr>
+            <!-- Menampilkan Gambar Mockup -->
+            <article class="card">
+                <img src="gambar.jpg" alt="Mockup Desain Landing Page Agensi" width="450">
+                <div class="card-body">
+                    <p><em>Gambar 1: Desain Landing Page Responsif untuk UMKM Lokal</em></p>
+                </div>
+            </article>
 
-     <section>
-        <h2>Paket Layanan & Harga Jasa Kreatif</h2>
-        <p>Pilihan paket layanan terbaik sesuai kebutuhan bisnis digital anda:</p>
-        
-        <table border="1" cellpandding="8" cellspacing="0">
-            <thead>
-                <tr bgcolor="#008080">
-                    <!-- Judul Tabel Menggunakan Colspan agar Memanjang di 4 kolom -->
-                     <th colspan="4"><font color="white">DAFTAR HARGA JASA AGENSIDIGITAL</font></th>
-                </tr>
-                <tr bgcolor="#F4F7F6">
-                    <th>Kategori Layanan</th>
-                    <th>Nama Paket</th>
-                    <th>Fasilitas Utama</th>
-                    <th>Estimasi Biaya</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <!-- Kategori Web Menggunakan 2 Baris Vertikal Menggunakan Rowspan -->
-                     <td rowspan="2"><b>Desain & Web</b></td>
-                     <td>Landing Page Silver</td>
-                     <td>1 Halaman, Kontak Form, Integrasi Chat</td>
-                     <td>Rp 1.500.000</td>
-                </tr>
-                <tr>
-                    <td>Website Bisnis Gold</td>
-                    <td>5 Halaman, SEO Dasar, Galeri Produk Dinamis</td>
-                    <td>Rp 3.500.000</td>
-                </tr>
-                <tr>
-                    <td rowspan="2"><b>Content Creator</b></td>
-                    <td>Sosmed Bronze</td>
-                    <td>12 Konten Feed, Copywriting Dasar</td>
-                    <td>Rp 1.000.000</td>
-                </tr>
-                <tr>
-                    <td>Sosmed Premium</td>
-                    <td>30 Konten Feed + Reels, Riset Hashtag, Admin Sosmed</td>
-                    <td>Rp 2.500.000</td>
-                </tr>
-            </tbody>
-        </table>
-     </section>
-     <footer>
+            <!-- Menyematkan Video YouTube Profil Agensi -->
+            <article class="card">
+                <div class="video-container">
+                    <iframe width="560" height="315"
+                        src="https://www.youtube.com/embed/sxCP11Gsju4"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">Video Youtube Profil Bisnis Kami</h3>
+                </div>
+            </article>
+        </section>
         <hr>
+
+        <!-- Bagian 2: Kartu Paket Layanan & Harga -->
+        <section class="section">
+            <h2 class="section-title">Paket Layanan &amp; Harga Jasa Kreatif</h2>
+            <p class="section-subtitle">Pilih paket layanan terbaik sesuai kebutuhan bisnis digital Anda:</p>
+
+            <div class="card-grid">
+
+                <!-- Kartu 1: Landing Page Silver -->
+                <article class="card pricing-card featured">
+                    <div class="card-body">
+                        <span class="badge">Web Development</span>
+                        <h3 class="card-title">Landing Page Silver</h3>
+                        <p class="card-price">Rp 1.500.000</p>
+                        <ul class="card-features">
+                            <li>1 Halaman Web Responsif</li>
+                            <li>Formulir Kontak Pemesanan</li>
+                            <li>Integrasi Chat Whatsapp</li>
+                        </ul>
+                        <a href="kontak.html" class="btn-primary">Pesan Paket</a>
+                    </div>
+                </article>
+
+                <!-- Kartu 2: Website Bisnis Gold -->
+                <article class="card pricing-card featured">
+                    <div class="card-body">
+                        <span class="badge badge-featured">Paling Populer</span>
+                        <h3 class="card-title">Website Bisnis Gold</h3>
+                        <p class="card-price">Rp 3.500.000</p>
+                        <ul class="card-features">
+                            <li>5 Halaman Web Lengkap</li>
+                            <li>Optimalisasi SEO Dasar</li>
+                            <li>Galeri Produk Dinamis</li>
+                        </ul>
+                        <a href="kontak.html" class="btn-primary">Pesan Paket</a>
+                    </div>
+                </article>
+
+                <!-- Kartu 3: Sosmed Bronze -->
+                <article class="card pricing-card featured">
+                    <div class="card-body">
+                        <span class="badge">Content Creator</span>
+                        <h3 class="card-title">Sosmed Bronze</h3>
+                        <p class="card-price">Rp 1.000.000</p>
+                        <ul class="card-features">
+                            <li>12 Konten Feed</li>
+                            <li>Copywriting Dasar</li>
+                            <li>Admin Kelola Sosmed</li>
+                        </ul>
+                        <a href="kontak.html" class="btn-primary">Pesan Paket</a>
+                    </div>
+                </article>
+
+                <!-- Kartu 4: Sosmed Premium -->
+                <article class="card pricing-card featured">
+                    <div class="card-body">
+                        <span class="badge">Content Creator</span>
+                        <h3 class="card-title">Sosmed Premium</h3>
+                        <p class="card-price">Rp 2.500.000</p>
+                        <ul class="card-features">
+                            <li>30 Konten Feed + Reels</li>
+                            <li>Riset Hashtag &amp; Copywriting</li>
+                            <li>Admin Kelola Sosmed</li>
+                        </ul>
+                        <a href="kontak.html" class="btn-primary">Pesan Paket</a>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
         <p align="center">&copy; 2026 Poliban DigiCraft Studio - Hak Cipta Dilindungi Undang-Undang</p>
-     </footer>
+    </footer>
+
 </body>
 </html>
